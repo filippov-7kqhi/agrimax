@@ -1,0 +1,7 @@
+name = "agrimax-groundmax-collector"
+main = "analytics-worker.js"
+compatibility_date = "2026-01-01"
+
+kv_namespaces = [
+  { binding = "EVENTS", id = "2050044f98b84572bbe7c81f6047e4ec" }
+]
