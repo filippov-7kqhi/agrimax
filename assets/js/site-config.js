@@ -24,9 +24,9 @@ window.SITE_CONFIG = {
   checkoutEndpoint: "",
 
   paymentLinks: {
-    "AM-VHF71": "",      // VHF71 71″ Heavy-Duty Hydraulic Offset Flail Ditch Bank Mower - USD 7,499
-    "AM-LFS53": "",      // LFS53 53″ 3-Point Flail Mower - USD 2,199
-    "AM-PHD18": "",      // PHD18 3-Point Post Hole Digger - USD 349
-    "AM-RC72": "",       // RC72 6 ft. Round-Back Rotary Cutter - USD 1,449
+    "AM-VHF71": "https://buy.stripe.com/7sY28q5ZF2EI8tA5M5eZ200",
+    "AM-LFS53": "https://buy.stripe.com/9B6dR8co3djmeRY5M5eZ201",
+    "AM-PHD18": "https://buy.stripe.com/9B6fZgds7cfiaBI3DXeZ202",
+    "AM-RC72": "https://buy.stripe.com/4gM8wO87NenqdNUfmFeZ203"
   }
 };
