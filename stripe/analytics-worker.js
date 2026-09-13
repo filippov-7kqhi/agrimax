@@ -33,7 +33,7 @@ const PRICES = {
   'AM-VHF71': 'price_1UEwrQB8Zih3YI49INqTGw56', 'AM-LFS53': 'price_1UEwrSB8Zih3YI49sTaxMOiY',
   'AM-PHD18': 'price_1UEwrVB8Zih3YI49suv1bWtW', 'AM-RC72': 'price_1UEwrXB8Zih3YI49cbR9dRWA',
   'GM-VHF71': 'price_1UEwsBB8Zih3YI4982GOKh9K', 'GM-LFS53': 'price_1UEwsEB8Zih3YI49jxhVnDsR',
-  'GM-PHD18': 'price_1UEwsGB8Zih3YI49LPbr1sRO', 'GM-RC72': 'price_1UEwsJB8Zih3YI492y9FmtJa',
+  'GM-PHD18': 'price_1UEwsGB8Zih3YI49LPbrlsRO', 'GM-RC72': 'price_1UEwsJB8Zih3YI492y9FmtJa',
 };
 
 export default {
