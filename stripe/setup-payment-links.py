@@ -200,6 +200,22 @@ def existing_links_by_sku(key):
 
 
 # ----------------------------------------------------------------------- write --
+def write_worker_prices(path, prices):
+    """The Worker resolves a basket by price id, so it needs the ids the run
+       just produced. Written, never transcribed -- in a terminal font "l" and
+       "1" are the same glyph, and a wrong id fails at the payment step."""
+    if not os.path.exists(path):
+        return False
+    src = open(path, encoding="utf-8").read()
+    body = ",\n".join(f"  '{sku}': '{pid}'" for sku, pid in prices.items())
+    new, n = re.subn(r"const PRICES = \{.*?\n\};",
+                     "const PRICES = {\n" + body + ",\n};", src, flags=re.S)
+    if n != 1:
+        raise SystemExit(f"{path}: could not find the PRICES block to replace")
+    open(path, "w", encoding="utf-8").write(new)
+    return True
+
+
 def write_config(path, links):
     """Replace only the paymentLinks block, leaving every other setting alone."""
     src = open(path, encoding="utf-8").read()
@@ -313,6 +329,9 @@ def main():
             os.makedirs(os.path.dirname(ids_path), exist_ok=True)
             json.dump(price_ids, open(ids_path, "w", encoding="utf-8"), indent=2)
             print(f"  written to {ids_path}")
+            worker = f"{base}/stripe/analytics-worker.js"
+            if write_worker_prices(worker, price_ids):
+                print(f"  written to {worker}  (redeploy the Worker to apply)")
         print()
 
     if args.dry_run:
