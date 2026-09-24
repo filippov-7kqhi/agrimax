@@ -38,12 +38,7 @@ if hasattr(sys.stdout, "reconfigure"):
 API = "https://api.stripe.com/v1"
 
 STORES = {
-    "branchforge": dict(domain="branchforge.shop", currency="gbp", country="GB", symbol="£"),
-    "haulcrest":   dict(domain="haulcrest.shop",   currency="gbp", country="GB", symbol="£"),
-    "rootvexx":    dict(domain="rootvexx.shop",    currency="gbp", country="GB", symbol="£"),
-    "lawnstride":  dict(domain="lawnstride.shop",  currency="gbp", country="GB", symbol="£"),
-    "agrimax":     dict(domain="agrimax.shop",     currency="usd", country="US", symbol="$"),
-    "groundmax":   dict(domain="groundmax.shop",   currency="usd", country="US", symbol="$"),
+    "agrimax": dict(domain="agrimax.shop", currency="usd", country="US", symbol="$"),
 }
 
 
